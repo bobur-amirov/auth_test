@@ -7,7 +7,7 @@ from rest_framework.parsers import JSONParser
 from rest_framework.response import Response
 
 class HelloView(APIView):
-    # permission_classes = (IsAuthenticated,)
+    permission_classes = (IsAuthenticated,)
     def get(self, request):
         content = {'message': 'Hello, World!'}
         return Response(content)
